@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platform & Solutions | Adam Greens</title>
+  <meta name="description" content="A cloud-based software platform for visibility, analytics, and intelligence across solar, wind, battery storage, EV charging, and smart meters." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pine: { 950: "#04140d", 900: "#07140e", 800: "#0b3d2e", 700: "#145c42", 600: "#1f8a4c" },
+            leaf: { 300: "#b8f08a", 400: "#7cdb5a", 500: "#4caf50" },
+            sand: { 50: "#fbf9f4", 100: "#f6f3ec", 200: "#ebe4d4" }
+          },
+          fontFamily: {
+            display: ['"Instrument Serif"', "Georgia", "serif"],
+            sans: ['"Plus Jakarta Sans"', "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-sans antialiased bg-sand-100 text-pine-900">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[80] focus:bg-leaf-400 focus:text-pine-900 focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
+
+  <header id="site-nav" class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-pine-900/90 backdrop-blur-md transition-colors">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+      <a href="index.html" class="flex items-center gap-2.5 text-white">
+        <svg class="h-9 w-9" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#0B3D2E"/>
+          <path d="M18 42c8-2 12-10 14-18 2 8 6 16 14 18-6 8-22 8-28 0Z" fill="#7CDB5A"/>
+          <path d="M32 14v28" stroke="#F6F3EC" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M32 24c6 2 10 6 12 12" stroke="#0B3D2E" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="text-[15px] font-semibold tracking-tight">Adam Greens</span>
+      </a>
+      <nav class="hidden items-center gap-8 text-sm text-white/80 md:flex" aria-label="Primary">
+        <a href="index.html" class="transition hover:text-white">Home</a>
+        <a href="platform.html" class="text-white">Platform</a>
+        <a href="platform.html#solutions" class="transition hover:text-white">Solutions</a>
+        <a href="about.html" class="transition hover:text-white">About Us</a>
+        <a href="about.html#contact" class="rounded-full bg-leaf-400 px-4 py-2 font-semibold text-pine-900 transition hover:bg-leaf-300">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden text-white" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-pine-900 px-5 py-4 md:hidden">
+      <div class="flex flex-col gap-4 text-white">
+        <a href="index.html">Home</a>
+        <a href="platform.html">Platform</a>
+        <a href="platform.html#solutions">Solutions</a>
+        <a href="about.html">About Us</a>
+        <a href="about.html#contact" class="font-semibold text-leaf-400">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="relative overflow-hidden bg-pine-900 pt-32 pb-20 text-white grain md:pt-40 md:pb-24">
+      <div class="hero-grid absolute inset-0"></div>
+      <div class="relative mx-auto max-w-7xl px-5 md:px-8">
+        <p class="text-xs uppercase tracking-[0.22em] text-leaf-400">Platform &amp; solutions</p>
+        <h1 class="mt-4 max-w-4xl font-display text-5xl leading-[0.95] sm:text-6xl lg:text-7xl">One intelligent platform for renewable energy</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">Renewable-energy assets generate valuable operational data every day. Adam Greens helps businesses bring this information together through a cloud-based software platform designed to provide greater visibility, analytics, and intelligence across their energy infrastructure.</p>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+      <div class="reveal max-w-2xl">
+        <p class="text-xs uppercase tracking-[0.22em] text-pine-600">Capabilities</p>
+        <h2 class="mt-3 font-display text-4xl sm:text-5xl">What our platform can do</h2>
+      </div>
+      <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <article class="reveal rounded-3xl bg-white p-8 shadow-sm">
+          <h3 class="text-xl font-semibold">Asset Monitoring</h3>
+          <p class="mt-3 text-sm leading-relaxed text-pine-800/70">Get a centralized view of connected energy assets and monitor their operational status and performance.</p>
+        </article>
+        <article class="reveal rounded-3xl bg-white p-8 shadow-sm">
+          <h3 class="text-xl font-semibold">Performance Analytics</h3>
+          <p class="mt-3 text-sm leading-relaxed text-pine-800/70">Compare actual performance with expected performance to identify inefficiencies and unusual patterns.</p>
+        </article>
+        <article class="reveal rounded-3xl bg-white p-8 shadow-sm">
+          <h3 class="text-xl font-semibold">Predictive Insights</h3>
+          <p class="mt-3 text-sm leading-relaxed text-pine-800/70">Use data patterns to identify potential issues and support proactive maintenance and operational planning.</p>
+        </article>
+        <article class="reveal rounded-3xl bg-white p-8 shadow-sm">
+          <h3 class="text-xl font-semibold">Real-Time Alerts</h3>
+          <p class="mt-3 text-sm leading-relaxed text-pine-800/70">Receive alerts when important performance or operational conditions require attention.</p>
+        </article>
+        <article class="reveal rounded-3xl bg-white p-8 shadow-sm">
+          <h3 class="text-xl font-semibold">Energy Forecasting</h3>
+          <p class="mt-3 text-sm leading-relaxed text-pine-800/70">Use historical and real-time data to better understand and forecast renewable-energy generation.</p>
+        </article>
+        <article class="reveal rounded-3xl bg-white p-8 shadow-sm">
+          <h3 class="text-xl font-semibold">Environmental Reporting</h3>
+          <p class="mt-3 text-sm leading-relaxed text-pine-800/70">Analyze renewable-energy performance and support data-driven environmental reporting.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="solutions" class="scroll-mt-24 bg-pine-900 text-white">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+        <div class="reveal max-w-2xl">
+          <p class="text-xs uppercase tracking-[0.22em] text-leaf-400">Solutions</p>
+          <h2 class="mt-3 font-display text-4xl sm:text-5xl">Across the energy ecosystem</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:px-8 lg:grid-cols-2 lg:items-center">
+        <div class="reveal relative min-h-[280px] overflow-hidden rounded-3xl">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80" alt="Solar panels reflecting sunlight" class="absolute inset-0 h-full w-full object-cover" />
+        </div>
+        <div class="reveal">
+          <p class="text-sm font-medium text-pine-600">☀️ Solar Energy</p>
+          <h3 class="mt-2 font-display text-4xl">Smarter visibility across your solar infrastructure.</h3>
+          <p class="mt-4 leading-relaxed text-pine-800/75">For large solar installations, monitoring thousands of individual assets can be challenging. Adam Greens can help operators track generation, identify underperforming assets, analyze trends, and receive operational alerts.</p>
+          <ul class="mt-6 grid gap-2 text-sm text-pine-800/80 sm:grid-cols-2">
+            <li class="rounded-full bg-white px-4 py-2">Asset monitoring</li>
+            <li class="rounded-full bg-white px-4 py-2">Performance analytics</li>
+            <li class="rounded-full bg-white px-4 py-2">Underperformance detection</li>
+            <li class="rounded-full bg-white px-4 py-2">Energy forecasting</li>
+            <li class="rounded-full bg-white px-4 py-2">Maintenance alerts</li>
+            <li class="rounded-full bg-white px-4 py-2">Historical analysis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:px-8 lg:grid-cols-2 lg:items-center">
+        <div class="reveal order-2 lg:order-1">
+          <p class="text-sm font-medium text-pine-600">🌬️ Wind Energy</p>
+          <h3 class="mt-2 font-display text-4xl">Data-driven intelligence for wind infrastructure.</h3>
+          <p class="mt-4 leading-relaxed text-pine-800/75">Monitor turbine performance and operational data while identifying unusual patterns that may require attention.</p>
+          <ul class="mt-6 grid gap-2 text-sm text-pine-800/80 sm:grid-cols-2">
+            <li class="rounded-full bg-white px-4 py-2">Turbine monitoring</li>
+            <li class="rounded-full bg-white px-4 py-2">Performance tracking</li>
+            <li class="rounded-full bg-white px-4 py-2">Operational analytics</li>
+            <li class="rounded-full bg-white px-4 py-2">Anomaly detection</li>
+            <li class="rounded-full bg-white px-4 py-2">Maintenance insights</li>
+            <li class="rounded-full bg-white px-4 py-2">Energy forecasting</li>
+          </ul>
+        </div>
+        <div class="reveal relative order-1 min-h-[280px] overflow-hidden rounded-3xl lg:order-2">
+          <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80" alt="Wind turbines on a hillside" class="absolute inset-0 h-full w-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50">
+      <div class="mx-auto max-w-7xl px-5 py-16 md:px-8">
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="reveal rounded-3xl bg-white p-8">
+            <p class="text-sm font-medium text-pine-600">🔋 Battery Storage</p>
+            <h3 class="mt-2 font-display text-3xl">Better visibility into energy storage.</h3>
+            <p class="mt-4 text-sm leading-relaxed text-pine-800/75">Understand how battery assets are performing, being used, and changing over time.</p>
+            <ul class="mt-6 space-y-2 text-sm text-pine-800/80">
+              <li>Battery monitoring</li>
+              <li>Performance analysis</li>
+              <li>Usage analytics</li>
+              <li>Operational alerts</li>
+              <li>Performance trends</li>
+            </ul>
+          </article>
+          <article class="reveal rounded-3xl bg-white p-8">
+            <p class="text-sm font-medium text-pine-600">⚡ EV Charging</p>
+            <h3 class="mt-2 font-display text-3xl">Smarter management of charging infrastructure.</h3>
+            <p class="mt-4 text-sm leading-relaxed text-pine-800/75">As EV infrastructure expands, businesses need visibility into charger availability, utilization, and operational performance.</p>
+            <p class="mt-4 text-sm leading-relaxed text-pine-800/75">Adam Greens helps bring this information into one connected software environment.</p>
+          </article>
+          <article class="reveal rounded-3xl bg-white p-8">
+            <p class="text-sm font-medium text-pine-600">📊 Smart Meters</p>
+            <h3 class="mt-2 font-display text-3xl">Turn energy measurements into meaningful insights.</h3>
+            <p class="mt-4 text-sm leading-relaxed text-pine-800/75">Smart meters generate valuable information about energy consumption and generation.</p>
+            <p class="mt-4 text-sm leading-relaxed text-pine-800/75">Adam Greens helps collect, organize, and analyze this information to provide a clearer picture of energy activity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+      <div class="reveal text-center">
+        <p class="text-xs uppercase tracking-[0.22em] text-pine-600">Architecture</p>
+        <h2 class="mt-3 font-display text-4xl sm:text-5xl">Built to connect. Designed to scale.</h2>
+        <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-pine-800/75">Adam Greens is focused on the software layer between energy infrastructure and the people managing it.</p>
+      </div>
+      <div class="reveal mt-14 overflow-x-auto">
+        <div class="flex min-w-[720px] items-center justify-between gap-3">
+          <div class="flex-1 rounded-2xl bg-white px-4 py-6 text-center text-sm font-semibold">Hardware</div>
+          <div class="h-px w-8 pipeline-line"></div>
+          <div class="flex-1 rounded-2xl bg-white px-4 py-6 text-center text-sm font-semibold">Data</div>
+          <div class="h-px w-8 pipeline-line"></div>
+          <div class="flex-1 rounded-2xl bg-pine-800 px-4 py-6 text-center text-sm font-semibold text-leaf-400">Software Intelligence</div>
+          <div class="h-px w-8 pipeline-line"></div>
+          <div class="flex-1 rounded-2xl bg-white px-4 py-6 text-center text-sm font-semibold">Insights</div>
+          <div class="h-px w-8 pipeline-line"></div>
+          <div class="flex-1 rounded-2xl bg-white px-4 py-6 text-center text-sm font-semibold">Action</div>
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <a href="about.html#contact" class="inline-flex rounded-full bg-pine-800 px-6 py-3 text-sm font-semibold text-white transition hover:bg-pine-700">Talk with us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-pine-800/10 bg-pine-950 text-white">
+    <div class="mx-auto max-w-7xl px-5 py-14 md:px-8">
+      <div class="flex flex-col justify-between gap-10 md:flex-row">
+        <div>
+          <p class="text-lg font-semibold">Adam Greens</p>
+          <p class="mt-2 max-w-sm text-sm text-white/60">Software intelligence for the renewable-energy ecosystem.</p>
+          <p class="mt-5 text-sm text-leaf-400">Solar · Wind · Battery Storage · EV Charging · Smart Meters</p>
+        </div>
+        <nav class="flex flex-wrap gap-x-8 gap-y-3 text-sm text-white/70" aria-label="Footer">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <a href="platform.html" class="hover:text-white">Platform</a>
+          <a href="platform.html#solutions" class="hover:text-white">Solutions</a>
+          <a href="about.html" class="hover:text-white">About Us</a>
+          <a href="about.html#contact" class="hover:text-white">Contact</a>
+        </nav>
+      </div>
+      <p class="mt-12 text-xs text-white/40">© 2026 Adam Greens. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

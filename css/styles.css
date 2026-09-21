@@ -1,0 +1,126 @@
+:root {
+  --pine: #0b3d2e;
+  --ink: #07140e;
+  --sand: #f6f3ec;
+  --leaf: #7cdb5a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--sand);
+  color: var(--ink);
+}
+
+::selection {
+  background: #1f8a4c;
+  color: #f6f3ec;
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(124, 219, 90, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 219, 90, 0.07) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+}
+
+.node {
+  animation: pulse 4.5s ease-in-out infinite;
+}
+
+.node:nth-child(2) { animation-delay: 0.6s; }
+.node:nth-child(3) { animation-delay: 1.4s; }
+.node:nth-child(4) { animation-delay: 2.1s; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.nav-scrolled {
+  background: rgba(7, 20, 14, 0.88);
+  backdrop-filter: blur(16px);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.pipeline-line {
+  background: linear-gradient(90deg, #7cdb5a 0%, #1f8a4c 50%, #7cdb5a 100%);
+  background-size: 200% 100%;
+  animation: flow 4s linear infinite;
+}
+
+@keyframes flow {
+  from { background-position: 0 0; }
+  to { background-position: 200% 0; }
+}
+
+.metric-bar {
+  transform-origin: left;
+  animation: grow 1.4s ease forwards;
+}
+
+@keyframes grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+input, select, textarea {
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(124, 219, 90, 0.28);
+}
+
+.asset-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.asset-card img {
+  transform: scale(1.02);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.asset-card:hover img,
+.asset-card:focus-visible img {
+  transform: scale(1.1);
+}
+
+.asset-card .asset-veil {
+  transition: opacity 0.45s ease;
+}
+
+.asset-card:hover .asset-veil,
+.asset-card:focus-visible .asset-veil {
+  opacity: 0.72;
+}
